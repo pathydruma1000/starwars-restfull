@@ -11,7 +11,7 @@ exports.index = function (req, res) {
         }
         res.json({
             status: "success",
-            message: planets.length + "planets retrieved successfully",
+            message: planets.length + " planets retrieved successfully",
             data: planets
         });
     });
@@ -47,16 +47,32 @@ exports.new = function (req, res) {
 };
 // Handle view planet info
 exports.view = function (req, res) {
-    Planet.findById(req.params._id, function (err, planet) {
-        if (err)
-            res.send(err);
-        res.json({
-            message: 'Planet details loading..', 
-            apparitions: planet.films.length, 
-            data: planet
+    if (req.params._id)
+    {
+        Planet.findById(req.params._id, function (err, planet) {
+            if (err)
+                res.send(err);
+            res.json({
+                message: 'Planet details loading..', 
+                apparitions: planet.films.length, 
+                data: planet
+            });
         });
-    });
+    }
+    if (req.params._name)
+    {
+        Planet.find({name: req.params._name}, function (err, planet) {
+            if (err)
+                res.send(err);
+            res.json({
+                message: 'Planet details loading..', 
+                data: planet
+            });
+        });
+    }
 };
+
+
 // Handle update planet info
 exports.update = function (req, res) {
     Planet.findById(req.params._id, function (err, planet) {
@@ -66,7 +82,7 @@ exports.update = function (req, res) {
         planet.climate = req.body.climate;
         planet.terrain = req.body.terrain;
         planet.films = req.body.films;
-        
+
         // save the planet and check for errors
         planet.save(function (err) {
             /*if (err)

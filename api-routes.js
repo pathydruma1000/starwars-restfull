@@ -19,5 +19,7 @@ router.route('/planets/:_id')
     .patch(planetController.update)
     .put(planetController.update)
     .delete(planetController.delete);
+router.route('/planets/name/:_name') 
+    .get(planetController.view);
 // Export API routes
 module.exports = router;

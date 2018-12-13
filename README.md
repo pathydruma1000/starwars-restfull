@@ -17,9 +17,10 @@
 
 ## Endpoints
 
-* GET http://127.0.0.1:8080/api/planets list all planets
-* POST http://127.0.0.1:8080/api/planets create new planet
-* GET http://127.0.0.1:8080/api/planets/{id} retrieve a single planet
-* PUT http://127.0.0.1:8080/api/planets/{id} update a single planet
-* DELETE http://127.0.0.1:8080/api/planets/{id} delete a single planet
+* GET http://127.0.0.1:8080/api/planets Listar planetas
+* POST http://127.0.0.1:8080/api/planets Adicionar um planeta 
+* GET http://127.0.0.1:8080/api/planets/{id} Buscar planeta por ID e mostrar a quantidade de aparições em filmes
+* GET http://127.0.0.1:8080/api/planets/name/{name} Buscar planeta por NOME
+* PUT http://127.0.0.1:8080/api/planets/{id} Alterar um planeta
+* DELETE http://127.0.0.1:8080/api/planets/{id} Deletar um planeta
 
