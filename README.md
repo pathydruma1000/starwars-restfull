@@ -1,4 +1,4 @@
-## Body Json Format
+## Json Format
 
 ```
 {
@@ -15,7 +15,7 @@
 }
 ```
 
-## endpoints
+## Endpoints
 
 * GET http://127.0.0.1:8080/api/planets list all planets
 * POST http://127.0.0.1:8080/api/planets create new planet
