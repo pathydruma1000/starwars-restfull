@@ -1,3 +1,11 @@
+## Linguagem 
+
+Node
+
+## Banco de dados
+
+MongoDB
+
 ## Json Format
 
 ```
