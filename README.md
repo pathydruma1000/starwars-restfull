@@ -18,7 +18,7 @@
 ## Endpoints
 
 * GET http://127.0.0.1:8080/api/planets Listar planetas
-* POST http://127.0.0.1:8080/api/planets Adicionar um planeta 
+* POST http://127.0.0.1:8080/api/planets Adicionar um planeta  
 * GET http://127.0.0.1:8080/api/planets/{id} Buscar planeta por ID e exibir a quantidade de aparições em filmes
 * GET http://127.0.0.1:8080/api/planets/name/{name} Buscar planeta por NOME
 * PUT http://127.0.0.1:8080/api/planets/{id} Alterar um planeta
